@@ -6,3 +6,6 @@ OpenFeign, Eureka Discovery Client
 eureka-server
 dependencies:
 spring-cloud-starter-netflix-eureka-server
+
+book-service General Exception Handling
+@RestControllerAdvice

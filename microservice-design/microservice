@@ -1,0 +1,8 @@
+library-service && book-service
+dependencies:
+Spring Web, Spring Data JPA, H2 Database, Lombok, Validation,
+OpenFeign, Eureka Discovery Client
+
+eureka-server
+dependencies:
+spring-cloud-starter-netflix-eureka-server

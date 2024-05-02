@@ -25,4 +25,12 @@ public class Book {
     String pressName;
 
     String isbn;
+
+    public Book(String title, int bookYear, String author, String pressName, String isbn) {
+        this.title = title;
+        this.bookYear = bookYear;
+        this.author = author;
+        this.pressName = pressName;
+        this.isbn = isbn;
+    }
 }

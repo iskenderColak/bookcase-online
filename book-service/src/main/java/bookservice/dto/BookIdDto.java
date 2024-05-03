@@ -14,8 +14,4 @@ public class BookIdDto {
 
     Integer bookId;
     String isbn;
-
-    public BookIdDto(Integer bookId) {
-        this.bookId = bookId;
-    }
 }

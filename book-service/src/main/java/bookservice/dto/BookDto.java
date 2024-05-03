@@ -20,11 +20,14 @@ public class BookDto {
 
     public static BookDto convert(Book book) {
         return new BookDto(
-            new BookIdDto(book.getBookId()),
-            book.getTitle(),
-            book.getBookYear(),
-            book.getAuthor(),
-            book.getPressName()
+                new BookIdDto(
+                        book.getBookId(),
+                        book.getIsbn()
+                ),
+                book.getTitle(),
+                book.getBookYear(),
+                book.getAuthor(),
+                book.getPressName()
         );
     }
 }

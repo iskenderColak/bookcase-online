@@ -5,11 +5,13 @@ import bookservice.dto.BookIdDto;
 import bookservice.exception.BookNotFoundException;
 import bookservice.repository.BookRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.validation.annotation.Validated;
 
 import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
+@Validated
 public class BookService {
 
     private final BookRepository bookRepository;

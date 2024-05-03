@@ -9,3 +9,10 @@ spring-cloud-starter-netflix-eureka-server
 
 book-service General Exception Handling
 @RestControllerAdvice
+
+Exception Handling && Constraints Validation
+javax --> jakarta olarak değiştirildi.
+-> Spring 3 ve üzeri sürümlerinde javax paketi yerine jakarta paketi kullanılmalıdır.
+-> Controller ve servis sınıflarına @Validated annotation'ı eklenmelidir.
+-> spring-boot-starter-validation dependency eklenmelidir.
+-> General Exception Handling sınıfına ConstraintViolationException tipinde bir exception handling metodu eklenmelidir.

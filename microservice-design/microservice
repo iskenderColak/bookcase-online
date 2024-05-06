@@ -16,3 +16,20 @@ javax --> jakarta olarak değiştirildi.
 -> Controller ve servis sınıflarına @Validated annotation'ı eklenmelidir.
 -> spring-boot-starter-validation dependency eklenmelidir.
 -> General Exception Handling sınıfına ConstraintViolationException tipinde bir exception handling metodu eklenmelidir.
+
+*** Eureka Server
+-> book-service ve library-service için app.properties düzenlemeleri yapıldı.
+    -> server.port=0
+    -> eureka.instance.prefer-ip-address=true
+    -> eureka.client.service-url.default-zone=${EUREKA_URI:http://localhost:8761/eureka}
+    -> eureka.client.register-with-eureka=true
+    -> eureka.client.fetch-registry=true
+-> EurekaServerApplication için @EnableEurekaServer annotation'ı eklendi.
+    -> application.properties
+        -> spring.application.name=eureka-server
+        -> server.port=8761
+        -> eureka.client.register-with-eureka=false
+        -> eureka.client.fetch-registry=false
+-> LibraryServiceApplication için @EnableFeignClient annotation'ı eklendi.
+-> library-service için BookServiceClient interface'i oluşturuldu.
+    -> @FeignClient(name = "book-service", path = "/v1/book")

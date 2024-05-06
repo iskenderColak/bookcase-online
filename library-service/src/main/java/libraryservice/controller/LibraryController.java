@@ -1,6 +1,7 @@
 package libraryservice.controller;
 
 import jakarta.validation.constraints.Positive;
+import libraryservice.dto.AddBookRequest;
 import libraryservice.dto.LibraryDto;
 import libraryservice.service.LibraryService;
 import org.springframework.http.ResponseEntity;
@@ -26,5 +27,11 @@ public class LibraryController {
     @PostMapping
     public ResponseEntity<LibraryDto> createLibrary() {
         return ResponseEntity.ok(libraryService.createLibrary());
+    }
+
+    @PutMapping
+    public ResponseEntity<Void> addBookToLibrary(@RequestBody AddBookRequest request) {
+        libraryService.addBookToLibrary(request);
+        return ResponseEntity.ok().build();
     }
 }

@@ -33,3 +33,17 @@ javax --> jakarta olarak değiştirildi.
 -> LibraryServiceApplication için @EnableFeignClient annotation'ı eklendi.
 -> library-service için BookServiceClient interface'i oluşturuldu.
     -> @FeignClient(name = "book-service", path = "/v1/book")
+
+*** Exception Handling with ErrorDecoder - BookNotFoundException
+-> LibraryServiceApplication için @Bean ErrorDecoder oluşturuldu.
+-> Loglama seviyesi için @Bean feignLoggerLevel oluşturuldu.
+-> RetrieveMessageErrorDecoder sınıfı oluşturuldu.
+    -> ErrorDecoder interface'ini implemente eder.
+    -> decode metodu override edilir.
+    -> Hata durumunda dönen mesajın loglanması sağlanır.
+-> ExceptionMessage sınıfı oluşturuldu.
+-> BookNotFoundException sınıfı oluşturuldu.
+    -> RuntimeException sınıfından türetilir.
+    -> Hata mesajı ve hata kodu alır.
+-> General Exception Handling sınıfına BookNotFoundException tipinde bir exception handling metodu eklendi.
+-> Pom.xml dosyasına common-io dependency eklendi.

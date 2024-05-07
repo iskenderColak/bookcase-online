@@ -1,6 +1,5 @@
 package libraryservice.exception;
 
-import jakarta.validation.ConstraintViolationException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -14,8 +13,11 @@ public class GeneralExceptionHandler {
         return new ResponseEntity<>(exception.getMessage(), HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler(ConstraintViolationException.class)
-    public ResponseEntity<?> handle(ConstraintViolationException exception) {
-        return new ResponseEntity<>(exception.getMessage(), HttpStatus.BAD_REQUEST);
+    @ExceptionHandler(BookNotFoundException.class)
+    public ResponseEntity<ExceptionMessage> handle(BookNotFoundException exception) {
+        return new ResponseEntity<>(
+                exception.getExceptionMessage(),
+                HttpStatus.resolve(exception.getExceptionMessage().status())
+        );
     }
 }

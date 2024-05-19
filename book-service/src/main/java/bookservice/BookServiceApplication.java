@@ -1,15 +1,18 @@
 package bookservice;
 
-import bookservice.model.Book;
-import bookservice.repository.BookRepository;
+
+import com.icolak.dal.model.Book;
+import com.icolak.dal.repository.BookRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 
 import java.util.Arrays;
 import java.util.List;
 
 @SpringBootApplication
+@ComponentScan({"bookservice", "com.icolak.dal"})
 public class BookServiceApplication implements CommandLineRunner {
 
 	private final BookRepository bookRepository;

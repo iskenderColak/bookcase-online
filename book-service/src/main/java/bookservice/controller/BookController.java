@@ -1,7 +1,7 @@
 package bookservice.controller;
 
-import bookservice.dto.BookDto;
-import bookservice.dto.BookIdDto;
+import com.icolak.dal.dto.BookDto;
+import com.icolak.dal.dto.BookIdDto;
 import bookservice.service.BookService;
 import jakarta.validation.constraints.*;
 import org.springframework.http.ResponseEntity;

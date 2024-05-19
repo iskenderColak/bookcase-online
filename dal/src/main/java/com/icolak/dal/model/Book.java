@@ -1,4 +1,4 @@
-package bookservice.model;
+package com.icolak.dal.model;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

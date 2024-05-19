@@ -1,11 +1,11 @@
 package bookservice.service;
 
-import bookservice.dto.BookDto;
-import bookservice.dto.BookIdDto;
+import com.icolak.dal.dto.BookDto;
+import com.icolak.dal.dto.BookIdDto;
 import bookservice.exception.BookNotFoundException;
 import bookservice.exception.ExceptionCodes;
 import bookservice.exception.MsNotFoundException;
-import bookservice.repository.BookRepository;
+import com.icolak.dal.repository.BookRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
 

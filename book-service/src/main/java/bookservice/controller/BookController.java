@@ -36,7 +36,7 @@ public class BookController {
     }
 
     @GetMapping("/book/{bookId}")
-    public ResponseEntity<BookDto> getBookById(@PathVariable @Positive @Max(3) Integer bookId) {
+    public ResponseEntity<BookDto> getBookById(@PathVariable @Positive @Max(5) Integer bookId) {
         return ResponseEntity.ok(bookService.findBookDetailsById(bookId));
     }
 }

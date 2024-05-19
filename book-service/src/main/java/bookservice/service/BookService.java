@@ -3,6 +3,8 @@ package bookservice.service;
 import bookservice.dto.BookDto;
 import bookservice.dto.BookIdDto;
 import bookservice.exception.BookNotFoundException;
+import bookservice.exception.ExceptionCodes;
+import bookservice.exception.MsNotFoundException;
 import bookservice.repository.BookRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.annotation.Validated;
@@ -28,8 +30,13 @@ public class BookService {
 
     public BookIdDto findByIsbn(String isbn) {
         return bookRepository.findByIsbn(isbn)
-            .map(book -> new BookIdDto(book.getBookId(), book.getIsbn()))
-            .orElseThrow(() -> new BookNotFoundException("Book could not found by isbn: " + isbn));
+                .map(book -> new BookIdDto(book.getBookId(), book.getIsbn()))
+                .orElseThrow(() ->
+                        new MsNotFoundException(
+                                ExceptionCodes.BOOK_NOT_FOUND,
+                                "Book could not found by isbn: " + isbn
+                        )
+                );
     }
 
     public BookDto findBookDetailsById(Integer bookId) {

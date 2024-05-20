@@ -47,3 +47,8 @@ javax --> jakarta olarak değiştirildi.
     -> Hata mesajı ve hata kodu alır.
 -> General Exception Handling sınıfına BookNotFoundException tipinde bir exception handling metodu eklendi.
 -> Pom.xml dosyasına common-io dependency eklendi.
+
+*** Ortaklaştırma için yeni bir modül oluşturuldu. Dal Modülü !
+-> book-service ve library-service modüllerindeki entity, repository ve dto sınıfları dal modülüne taşındı.
+-> book-service ve library-service pom dosyalarına dal modülü için dependency eklendi.
+-> Exception handling için grumblz tarzına uygun hata mesajları oluşturuldu.

@@ -1,4 +1,4 @@
-package libraryservice.dto;
+package com.icolak.dal.dto.library;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -10,10 +10,7 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class BookDto {
-    BookIdDto bookIdDto;
-    String title;
-    Integer year;
-    String author;
-    String pressName;
+public class AddBookRequest {
+    Integer id;
+    String isbn;
 }

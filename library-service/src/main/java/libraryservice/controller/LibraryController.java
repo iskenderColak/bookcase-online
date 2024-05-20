@@ -1,8 +1,8 @@
 package libraryservice.controller;
 
+import com.icolak.dal.dto.library.AddBookRequest;
+import com.icolak.dal.dto.library.LibraryDto;
 import jakarta.validation.constraints.Positive;
-import libraryservice.dto.AddBookRequest;
-import libraryservice.dto.LibraryDto;
 import libraryservice.service.LibraryService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;

@@ -1,7 +1,7 @@
 package libraryservice.client;
 
-import libraryservice.dto.BookDto;
-import libraryservice.dto.BookIdDto;
+import com.icolak.dal.dto.book.BookDto;
+import com.icolak.dal.dto.book.BookIdDto;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

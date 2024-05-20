@@ -1,5 +1,6 @@
-package libraryservice.dto;
+package com.icolak.dal.dto.library;
 
+import com.icolak.dal.dto.book.BookDto;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;

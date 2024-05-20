@@ -1,4 +1,4 @@
-package libraryservice.model;
+package com.icolak.dal.model.library;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;

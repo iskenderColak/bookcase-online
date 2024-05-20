@@ -1,6 +1,6 @@
-package com.icolak.dal.repository;
+package com.icolak.dal.repository.book;
 
-import com.icolak.dal.model.Book;
+import com.icolak.dal.model.book.Book;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

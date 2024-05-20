@@ -1,23 +1,28 @@
 package libraryservice.service;
 
+import com.icolak.dal.dto.library.AddBookRequest;
+import com.icolak.dal.dto.library.LibraryDto;
+import com.icolak.dal.model.library.Library;
+import com.icolak.dal.repository.library.LibraryRepository;
 import libraryservice.client.BookServiceClient;
-import libraryservice.dto.AddBookRequest;
-import libraryservice.dto.LibraryDto;
 import libraryservice.exception.LibraryNotFoundException;
-import libraryservice.model.Library;
-import libraryservice.repository.LibraryRepository;
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 
 import java.util.stream.Collectors;
 
+@Slf4j
 @Validated
 @Service
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class LibraryService {
 
-    private final LibraryRepository libraryRepository;
-    private final BookServiceClient bookServiceClient;
+    final LibraryRepository libraryRepository;
+    final BookServiceClient bookServiceClient;
 
     public LibraryService(LibraryRepository libraryRepository, BookServiceClient bookServiceClient) {
         this.libraryRepository = libraryRepository;

@@ -1,6 +1,6 @@
-package com.icolak.dal.dto;
+package com.icolak.dal.dto.book;
 
-import com.icolak.dal.model.Book;
+import com.icolak.dal.model.book.Book;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
